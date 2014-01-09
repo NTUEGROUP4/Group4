@@ -11,13 +11,16 @@
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>國立臺北教育大學_學習網</title>
+//此頁面的標題
 </head>
 
 <body>
 <div id="HEADER">
 	<h2>電腦科學學習網</h2>
+	//以h2字體圍大小的子標題
 </div>
 <div id="MAIN_NAV">
+//方便排版的標籤，內含一個表格
 	<ul>
 		<li><a href="reading.php">開始閱讀</a></li> 
 		<li><a href="upload.php">檔案上傳</a></li>
@@ -27,6 +30,7 @@
 		<li><a href="group.php">管理團隊</a></li>
 		<li><b>管理者專區</b></li>
 		<li><a href="index.php" style="color:#FF99FF">回首頁</a></li>
+		//表格中含有八個鏈結，每個鏈結可通往不同頁面
 	</ul>
 </div>
 <div id="CONTENT">
