@@ -27,7 +27,7 @@
 		<li><a href="group.php">管理團隊</a></li>
 		<li><b>管理者專區</b></li>
 		<li><a href="index.php" style="color:#FF99FF">回首頁</a></li>
-		//
+		//表格中含有八個鏈結，每個鏈結可通往不同頁面，現在位於管理者專區的頁面
 	</ul>
 </div>
 <div id="CONTENT">
@@ -51,10 +51,12 @@
 					<p>
 					</p>
 				</form>
+				//資料庫與網頁的鏈結與對應，以及輸入之限制
 		<?php
 			}
 			else if($button === "修改"){
 				$sql = "SELECT * FROM reading WHERE serial='$serial'";
+				//從reading這個資料表，藉由sql去篩選出序號此欄位的序號出來，若不符合格式會跑mysql error此函數，若符合格式將會請reading done執行動作
 				$result = mysql_query($sql);
 											
 				if (!$result) { 
@@ -87,7 +89,8 @@
 				else{
 					echo "<h3>資料已刪除.....</h3>";
 				}
-			}	
+			}
+			//從serial中將資料刪除並顯示資料已刪除
 		?>
 		</center>
 	</p>	
