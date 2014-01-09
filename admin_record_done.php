@@ -31,6 +31,8 @@
 		<li><a href="group.php">管理團隊</a></li>
 		<li><b>管理者專區</b></li>
 		<li><a href="index.php" style="color:#FF99FF">回首頁</a></li>
+		 //表格中含有八個鏈結，每個鏈結可通往不同頁面，現在位於管理者專區的頁面
+
 		
 	</ul>
 </div>
