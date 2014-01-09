@@ -39,6 +39,8 @@ include("mysql_connect.php");
 			</p>
 			<input type="submit" name="button" value="送出" />
 			<p>
+			//id = "student1"
+			//pw = "student1"
 			</p>
 		</form>
 		
