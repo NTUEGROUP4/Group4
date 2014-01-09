@@ -53,14 +53,14 @@ $row = mysql_fetch_array(mysql_query($sql));
 				echo "<table width=800 border=1>";
 				echo "<tr align=center><td>姓名</td><td>資料名</td><td>時間</td><td>評論</td></tr>";		
 					
-				while($row = mysql_fetch_array($result)){ 
+				/*while($row = mysql_fetch_array($result)){ 
 					echo "<tr align=center><td>".$row['account']."</td>";
 					echo "<td>".$row['name']."</td>";
 					echo "<td>".$row['time']."</td>";
 					echo "<td>".$row['comments']."</td>";
 					echo "</tr>";
 				}
-				echo "</table>";
+				echo "</table>";*/
 			}
 		?>
 		<form name="form" method="post" action=" record.php">
