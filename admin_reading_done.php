@@ -8,6 +8,7 @@
 	$name = $_POST['name'];
 	$content = $_POST['content'];
 	$button = $_POST['button'];
+	
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>國立臺北教育大學_學習網</title>
@@ -30,7 +31,7 @@
 		<li><a href="group.php">管理團隊</a></li>
 		<li><b>管理者專區</b></li>
 		<li><a href="index.php" style="color:#FF99FF">回首頁</a></li>
-		//表格中含有八個鏈結，每個鏈結可通往不同頁面
+		//表格中含有八個鏈結，每個鏈結可通往不同頁面，現在位於管理者專區的頁面
 	</ul>
 </div>
 <div id="CONTENT">
@@ -48,6 +49,7 @@
 				}
 				echo "<h3>資料已新增.....</h3>";
 			}
+			//當按下新增按鈕時，會將使用者打的四項加入資料庫，之後判斷result，錯誤出現error，正確則顯示資料已新增
 			else if($button === "修改"){
 				$sql = "UPDATE reading SET serial='$serial', type='$type', name='$name', content='$content' WHERE serial='$serial'";//要update的value值
 				$result = mysql_query($sql);
@@ -55,7 +57,8 @@
 					die('Invalid query: ' . mysql_error());
 				}
 				echo "<h3>資料已修改.....</h3>";
-			}	
+			}
+			//與新增按鍵相同作用
 						
 		?>
 		</center>
