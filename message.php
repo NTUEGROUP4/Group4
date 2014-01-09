@@ -38,7 +38,7 @@
 <div id="CONTENT"> 
 	<p align="center"><img src="messagepicture\fig.jpg"></p>
     <?php
-      require_once("dbtools.inc.php");
+      /*require_once("dbtools.inc.php");
 			
       
       $records_per_page = 5;
@@ -112,7 +112,7 @@
 
       
       mysql_free_result($result);
-      mysql_close($link);
+      mysql_close($link);*/
     ?>
     <form name="myForm" method="post" action="post.php">
       <table border="0" width="800" align="center" cellspacing="0">
