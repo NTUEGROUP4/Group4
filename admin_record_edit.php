@@ -56,6 +56,7 @@
 			else if($button === "修改"){
 				
 				$sql = "SELECT * FROM record WHERE serial='$serial_number' AND account='$account'"; 
+				//從record資料表中選出序號和帳戶的兩個欄位
 				$result = mysql_query($sql);
 											
 				if (!$result) { 
@@ -80,6 +81,7 @@
 			}
 			else if($button === "刪除"){
 				$sql = "DELETE FROM record WHERE serial='$serial_number' AND account='$account'";
+				//從record資料表中刪除序號和帳戶的兩個欄位
 				$result = mysql_query($sql);
 											
 				if (!$result) {
