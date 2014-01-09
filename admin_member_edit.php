@@ -16,12 +16,12 @@
 </div>
 <div id="MAIN_NAV">
 	<ul>
-		<li><a href="reading.php">開始閱讀</a></li>
-		<li><a href="upload.php">檔案上傳</a></li>
+		<li><a href="reading.php">會員登入</a></li>
+		<li><a href="upload.php">好康分享</a></li>
 		<li><a href="message.php">留言板</a></li>
 		<li><a href="record.php">歷史紀錄</a></li>
 		<li><a href="login.php">會員資料修改</li>
-		<li><a href="group.php">管理團隊</a></li>
+		<li><a href="group.php">關於我們</a></li>
 		<li><b>管理者專區</b></li>
 		<li><a href="index.php" style="color:#FF99FF">回首頁</a></li>
 	</ul>
@@ -33,7 +33,7 @@
 		<br/>
 		<center>
 		<?php
-			
+			//按新增，可新增帳號、密碼、使用者姓名、Email、城市、年齡
 			if($button === "新增"){　
 		?>
 				<form name="form" method="post" action="admin_member_done.php">
@@ -45,12 +45,13 @@
 					城市：</h1><input type="text" name="country" /> <br>
 					年齡：</h1><input type="text" name="age" /> <br>
 					</p>
-					<input type="submit" name="button" value="新增" />
+					<input type="submit" name="button" value="新增" /><!--按新增，剛才新增的資料會輸入資料庫-->
 					<p>
 					</p>
 				</form>
 		<?php
 			}
+			//按修改，可修改帳號、密碼、使用者姓名、Email、城市、年齡
 			else if($button === "修改"){
 				$sql = "SELECT * FROM member WHERE account='$account'";
 				$result = mysql_query($sql);
@@ -70,13 +71,14 @@
 						城市：</h1><input type="text" name="country" value="<?php echo $row['country']; ?>" /> <br>
 						年齡：</h1><input type="text" name="age" value="<?php echo $row['age']; ?>" /> <br>
 						</p>
-						<input type="submit" name="button" value="修改" />
+						<input type="submit" name="button" value="修改" /><!--按修改，剛才修改的資料會輸入資料庫-->
 						<p>
 						</p>
 					</form>
 		<?php
 				}
 			}
+			//按刪除，可刪除帳號、密碼、使用者姓名、Email、城市、年齡
 			else if($button === "刪除"){ 
 				$sql = "DELETE FROM member WHERE account='$account'"; 
 				$result = mysql_query($sql);
@@ -85,7 +87,7 @@
 					die('Invalid query: ' . mysql_error());
 				}
 				else{
-					echo "<h3>資料已刪除.....</h3>";
+					echo "<h3>資料已刪除.....</h3>";//顯示資料已刪除
 				}
 			}
 		?>
@@ -95,7 +97,7 @@
 <div id="FOOTER">	
 	<p>
 		<br/><br/><br/><br/><br/><br/>
-		<h2><center><br/>Author by <i>Yi-Chan Kao</i> & <i>Kung-Si Cheng</i> </center></h2>
+		<h2><center><br/>Author by <i>Group4</i> </center></h2>
 	</p>
 </div>
 </body>
