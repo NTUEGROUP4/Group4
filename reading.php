@@ -42,6 +42,14 @@ include("mysql_connect.php");
 			</p>
 		</form>
 		
+		
+			/*<p>
+			id = student1
+			pw = student1
+			
+			</p>*/
+		
+		
 		</center>
 		</h3>
 	</p>
