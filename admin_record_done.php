@@ -51,6 +51,7 @@
 				}
 				echo "<h3>資料已新增.....</h3>";
 			}
+			//當按下新增按鈕時，會將使用者打的四項加入資料庫，之後判斷result，錯誤出現error，正確則顯示資料已新增
 			else if($button === "修改"){
 				$sql = "UPDATE record SET serial='$serial', account='$account', time='$time', comments='$comments' WHERE serial='$serial' AND account='$account'";//要update的value值
 				$result = mysql_query($sql);
@@ -59,6 +60,7 @@
 				}
 				echo "<h3>資料已修改.....</h3>";
 			}	
+			//與新增相同概念
 						
 		?>
 		</center>
