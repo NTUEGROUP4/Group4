@@ -57,7 +57,7 @@ $row = mysql_fetch_array(mysql_query($sql));
 				echo "<table width=800 border=1>";            
 				echo "<tr align=center><td>選取</td><td>編號</td><td>類型</td><td>資料名</td></tr>";		
 					
-				/*while($row = mysql_fetch_array($result)){     
+				while($row = mysql_fetch_array($result)){     
 					
 					echo "<tr align=center><td><input name='select' type='radio' value=".$row['serial']."+".$row['type']."></td>"; //radio屬性，value輸出的內容				
 					echo "<td>".$row['serial']."</td>";
@@ -68,7 +68,7 @@ $row = mysql_fetch_array(mysql_query($sql));
 				echo "</table>";
 				echo "<input type='submit' name='button' value='開始閱讀' />";	
 				echo "</form>";
-			}*/
+			}
 		?>
 		<br/><br/><br/><br/><br/><br/><br/><br/><br/>
 		<form name="form" method="post" action=" reading.php">
