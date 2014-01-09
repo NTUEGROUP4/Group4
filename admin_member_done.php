@@ -21,12 +21,12 @@
 </div>
 <div id="MAIN_NAV">
 	<ul>
-		<li><a href="reading.php">開始閱讀</a></li>  
-		<li><a href="upload.php">檔案上傳</a></li>
+		<li><a href="reading.php">會員登入</a></li>  
+		<li><a href="upload.php">好康分享</a></li>
 		<li><a href="message.php">留言板</a></li>
 		<li><a href="record.php">歷史紀錄</a></li>
 		<li><a href="login.php">會員資料修改</li>
-		<li><a href="group.php">管理團隊</a></li>
+		<li><a href="group.php">關於我們</a></li>
 		<li><b>管理者專區</b></li>
 		<li><a href="index.php" style="color:#FF99FF">回首頁</a></li>
 	</ul>
@@ -38,21 +38,22 @@
 		<br/>
 		<center>
 		<?php
+		//按了新增後，會從資料庫新增資料
 			if($button === "新增"){ 
 				$sql = "INSERT INTO member (account, password, username, email, country, age) VALUES ('$account', '$password', '$username', '$email', '$country', '$age')"; //要insert的value值
 				$result = mysql_query($sql);
 				if (!$result) { /
 					die('Invalid query: ' . mysql_error());
 				}
-				echo "<h3>資料已新增.....</h3>";
-			}
+				echo "<h3>資料已新增.....</h3>";//顯示資料已新增
+			}//按了修改後，會從資料庫修改資料
 			else if($button === "修改"){  
 				$sql = "UPDATE member SET account='$account', password='$password', username='$username', email='$email', country='$country', age='$age' WHERE account='$account'";//要update的value值
 				$result = mysql_query($sql);
 				if (!$result) { 
 					die('Invalid query: ' . mysql_error());
 				}
-				echo "<h3>資料已修改.....</h3>";
+				echo "<h3>資料已修改.....</h3>";//顯示資料已修改
 			}	
 						
 		?>
@@ -62,7 +63,7 @@
 <div id="FOOTER">	
 	<p>
 		<br/><br/><br/><br/><br/><br/>
-		<h2><center><br/>Author by <i>Yi-Chan Kao</i> & <i>Kung-Si Cheng</i> </center></h2>
+		<h2><center><br/>Author by <i>Group4</i> </center></h2>
 	</p>
 </div>
 </body>
