@@ -26,6 +26,7 @@ include("mysql_connect.php");
 </div>
 <div id="CONTENT">
 	<p>
+		
 		<center>  
 		<h2>閱讀紀錄查詢<br/></h2>
 		<br/>
@@ -39,9 +40,11 @@ include("mysql_connect.php");
 			</p>
 			<input type="submit" name="button" value="送出" />
 			<p>
-			//id = "student1"
-			//pw = "student1"
+			
 			</p>
+			
+			/*帳號 <id = "student1">*/
+			/*密碼 <pw = "student1">*/
 		</form>
 		
 		</center>
