@@ -38,6 +38,7 @@ $row = mysql_fetch_array(mysql_query($sql));
 		<br/>
 		
 		<?php
+			//判斷帳號密碼是否正確
 			if (!$row) { 
 				echo "<h3>帳號或密碼錯誤，請重新輸入</h3>";
         		echo '<meta http-equiv=REFRESH CONTENT=2;url=record.php>';
@@ -53,14 +54,14 @@ $row = mysql_fetch_array(mysql_query($sql));
 				echo "<table width=800 border=1>";
 				echo "<tr align=center><td>姓名</td><td>資料名</td><td>時間</td><td>評論</td></tr>";		
 					
-				/*while($row = mysql_fetch_array($result)){ 
+				while($row = mysql_fetch_array($result)){ 
 					echo "<tr align=center><td>".$row['account']."</td>";
 					echo "<td>".$row['name']."</td>";
 					echo "<td>".$row['time']."</td>";
 					echo "<td>".$row['comments']."</td>";
 					echo "</tr>";
 				}
-				echo "</table>";*/
+				echo "</table>";
 			}
 		?>
 		<form name="form" method="post" action=" record.php">
