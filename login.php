@@ -33,7 +33,7 @@
 			帳號：<input type="text" name="id" /> <br>
 			密碼：</h1><input type="password" name="pw" /> <br>
 			</p>
-			<input type="submit" name="button" value="送出" />
+			<input type="submit" name="button" value="送出" /><!--按"送出"鍵即可修改資料-->
 			<p>
 			</p>
 		</form>
